@@ -61,3 +61,13 @@ fetch("https://dog.ceo/api/breeds/image/random")
   .catch((error) => {
     console.error("Error:", error);
   });
+
+  fetch("https://aws.random.cat/meow")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    document.getElementById("imagecat").src = data.file;
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
